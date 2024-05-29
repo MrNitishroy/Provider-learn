@@ -4,6 +4,8 @@ import 'package:provider_learn/Examples/Counter/CounterPage.dart';
 import 'package:provider_learn/Examples/Slider/SliderExample.dart';
 import 'package:provider_learn/Examples/Todo/TodoPage.dart';
 
+import 'Examples/Theme/ThemeChanger.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -61,6 +63,16 @@ class HomePage extends StatelessWidget {
               tileColor: Colors.white,
               leading: const Icon(Icons.check_box),
               title: const Text("Todo"),
+            ),
+            const SizedBox(height: 10),
+            ListTile(
+              onTap: () {
+                Get.to(ChangeThemePage());
+              },
+              splashColor: Colors.deepPurple.shade400,
+              tileColor: Colors.white,
+              leading: const Icon(Icons.dark_mode),
+              title: const Text("Change Theme"),
             ),
           ],
         ),
