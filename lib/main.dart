@@ -8,6 +8,8 @@ import 'package:provider_learn/Provider/SliderProvider.dart';
 import 'package:provider_learn/Provider/ThemeProvider.dart';
 import 'package:provider_learn/Provider/TodoProvider.dart';
 
+import 'Provider/ApiProvider.dart';
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
@@ -17,6 +19,7 @@ void main() {
         ChangeNotifierProvider(create: (_) => SliderProvider()),
         ChangeNotifierProvider(create: (_) => TodoProvider()),
         ChangeNotifierProvider(create: (_) => ThemeProvider()),
+        ChangeNotifierProvider(create: (_) => ApiProvider()),
       ],
       child: const MyApp(),
     ),

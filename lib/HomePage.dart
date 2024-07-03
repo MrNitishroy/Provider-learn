@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:provider_learn/Examples/Api/GetApiCalling.dart';
 import 'package:provider_learn/Examples/Counter/CounterPage.dart';
 import 'package:provider_learn/Examples/Slider/SliderExample.dart';
 import 'package:provider_learn/Examples/Todo/TodoPage.dart';
@@ -34,6 +35,12 @@ class HomePage extends StatelessWidget {
                 fontWeight: FontWeight.w500,
                 color: Colors.deepPurple,
               ),
+            ),
+            const SizedBox(height: 10),
+            Row(
+              children: [
+                Text("BASIC"),
+              ],
             ),
             const SizedBox(height: 10),
             ListTile(
@@ -84,6 +91,22 @@ class HomePage extends StatelessWidget {
               tileColor: Colors.white,
               leading: const Icon(Icons.notification_add),
               title: const Text("ValueNotifier"),
+            ),
+            const SizedBox(height: 10),
+            Row(
+              children: [
+                Text("API WITH PROVIDER"),
+              ],
+            ),
+            const SizedBox(height: 10),
+            ListTile(
+              onTap: () {
+                Get.to(ApiCalling());
+              },
+              splashColor: Colors.deepPurple.shade400,
+              tileColor: Colors.white,
+              leading: const Icon(Icons.get_app),
+              title: const Text("API CALLING (GET)"),
             ),
           ],
         ),
