@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:provider_learn/Examples/Counter/CounterPage.dart';
 import 'package:provider_learn/Examples/Slider/SliderExample.dart';
 import 'package:provider_learn/Examples/Todo/TodoPage.dart';
+import 'package:provider_learn/Examples/ValueNotifier/ValueNotifier.dart';
 
 import 'Examples/Theme/ThemeChanger.dart';
 
@@ -73,6 +74,16 @@ class HomePage extends StatelessWidget {
               tileColor: Colors.white,
               leading: const Icon(Icons.dark_mode),
               title: const Text("Change Theme"),
+            ),
+            const SizedBox(height: 10),
+            ListTile(
+              onTap: () {
+                Get.to(ValueNotifierPage());
+              },
+              splashColor: Colors.deepPurple.shade400,
+              tileColor: Colors.white,
+              leading: const Icon(Icons.notification_add),
+              title: const Text("ValueNotifier"),
             ),
           ],
         ),
